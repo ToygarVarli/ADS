@@ -13,13 +13,21 @@
 #include "AdsVariable.h"
 
 
+static void test()
+{
+    AdsWrapper wrapper;
+
+  wrapper.writeValue(1);
+
+}
+
+
 int main()
 {
+    std::cout << "Test";
     try {
 
-AdsWrapper wrapper;
-  wrapper.writeValue(std::cout,1);
-
+test();
 
     } catch (const AdsException& ex) {
         std::cout << "Error: " << ex.errorCode << "\n";
