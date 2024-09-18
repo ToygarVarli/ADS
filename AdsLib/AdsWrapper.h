@@ -1,6 +1,6 @@
-#ifdef BUILDING_DLL
+#ifdef ADSLIB_EXPORTS
 #define DLL_API __declspec(dllexport)
-#else 
+#else
 #define DLL_API __declspec(dllimport)
 #endif
 
