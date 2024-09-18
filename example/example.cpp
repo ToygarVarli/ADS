@@ -13,12 +13,12 @@
 #include "AdsVariable.h"
 
 
-static void test()
+/*static void test()
 {
    /*AdsWrapper wrapper;
   wrapper.writeValue(1);*/
 
-}
+//}*/
 
 
 int main()
