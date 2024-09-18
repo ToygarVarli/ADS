@@ -1,7 +1,7 @@
 #ifdef BUILDING_DLL
-#define ADSWRAPPER_API __declspec(dllexport)
+#define DLL_API __declspec(dllexport)
 #else 
-#define ADSWRAPPER_API __declspec(dllimport)
+#define DLL_API __declspec(dllimport)
 #endif
 
 
@@ -22,7 +22,7 @@ extern "C" {
 
 
 // writeValueTest fonksiyonu için basitleştirilmiş versiyon
-ADSWRAPPER_API void writeValueTest();
+DLL_API void writeValueTest();
 
 #ifdef __cplusplus
 }
