@@ -1,16 +1,16 @@
 #ifndef ADSWRAPPER_H
 #define ADSWRAPPER_H
 
+#include "AdsLib.h"
+#include <string>
+
 class AdsWrapper {
 public:
-    AdsWrapper();                 // Constructor
-    ~AdsWrapper();                // Destructor
+    AdsWrapper();
+    ~AdsWrapper();
 
-    void writeValue(int value);  // Method to set the value
-         // Method to get the value
-
-private:
-    int m_value;               // Private member variable to store the value
+    void writeValue(AmsNetId remoteNetId, char remoteIpV4[], int16_t value, const std::string& symbol);
+    void writeValueTest();
 };
 
-#endif // MYCLASS_H
+#endif // ADSWRAPPER_H
