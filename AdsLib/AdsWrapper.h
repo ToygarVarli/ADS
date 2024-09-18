@@ -1,7 +1,11 @@
-#ifdef ADSLIB_EXPORTS
-#define DLL_API __declspec(dllexport)
+#ifdef _WIN32
+#ifdef _DLL
+#define DLL_API __declspec(dllexport) // Being compiled as a DLL.
 #else
-#define DLL_API __declspec(dllimport)
+#define DLL_API __declspec(dllimport) // Not being compiled as a DLL.
+#endif
+#else
+#define DLL_API
 #endif
 
 
