@@ -24,7 +24,7 @@ static void test()
 int main()
 {
     std::cout << "Test";
-    try {
+    //try {
 
 /*test();
 
