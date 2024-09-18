@@ -3,16 +3,16 @@
    Copyright (c) 2015 - 2021 Beckhoff Automation GmbH & Co. KG
  */
 
-#include "../AdsLib/AdsWrapper.h"
+/*#include "../AdsLib/AdsWrapper.h"
 #include "../AdsLib/AdsLib.h"
-#include <iostream>
+#include <iostream>*/
 
 
 
 int main()
 {
-AdsWrapper adsWrapper;
-adsWrapper.writeValueTest();
+//AdsWrapper adsWrapper;
+//adsWrapper.writeValueTest();
     
 
     /*static AmsNetId remoteNetId { 169,254,53,70,1,1 };
