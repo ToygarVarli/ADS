@@ -15,9 +15,8 @@
 
 static void test()
 {
-    AdsWrapper wrapper;
-
-  wrapper.writeValue(1);
+   /*AdsWrapper wrapper;
+  wrapper.writeValue(1);*/
 
 }
 
@@ -27,7 +26,7 @@ int main()
     std::cout << "Test";
     try {
 
-test();
+/*test();
 
     } catch (const AdsException& ex) {
         std::cout << "Error: " << ex.errorCode << "\n";
@@ -36,5 +35,5 @@ test();
         std::cout << ex.what() << '\n';
     }
     std::cout << "Hit ENTER to continue\n";
-    std::cin.ignore();
+    std::cin.ignore();*/
 }
