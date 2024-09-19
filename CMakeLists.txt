@@ -73,4 +73,3 @@ install(EXPORT adsTargets
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/cmake/adsConfig.cmake"
       "${CMAKE_CURRENT_BINARY_DIR}/adsConfigVersion.cmake"
     DESTINATION "${cmake_configfile_install}")
-
