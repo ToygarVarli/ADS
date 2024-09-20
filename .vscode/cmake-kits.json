@@ -1,0 +1,6 @@
+[
+    {
+        "name": "nilrt-x64-Toygar",
+        "toolchainFile": "${workspaceRoot}/cmake/nilrt-x64-toolchain.cmake"
+    }
+]
