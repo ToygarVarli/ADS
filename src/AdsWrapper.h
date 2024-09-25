@@ -1,32 +1,42 @@
 #ifndef ADSWRAPPER_H
 #define ADSWRAPPER_H
 
-#include "AdsLib.h"
+#include <cstdint>
+#include <cstring>
+#include <vector>
 #include <string>
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-// writeValueTest fonksiyonu için basitleştirilmiş versiyon
-void writeValueTestWrapper();
+    bool IsAdsRouteAvailable();
+    bool CreateAdsRoute();
 
-bool writeIntValueToPath(const std::string& path ,int16_t value );
-bool writeDoubleValueToPath(const std::string&& symbol , double_t value);
-bool writeStringValueToPath(const std::string& symbol,const std::string& value);
-bool readIntValueFromPath(const std::string& path);
-bool readDoubleValueFromPath(const std::string& path);
-bool readStringValueFromPath(const std::string& path); 
+
+    bool writeRealValueToPath(const char *symbolPath, float value);
+    float readRealValueFromPath(const char *symbolPath);
+
+    float *readRealArrayFromPath(float *destination, const char *path, short size);
+    bool writeRealArrayToPath(float *source, const char *path, short size);
+
+    void freeRealArray(float *array);
+
+    /*
+    void writeValueTestWrapper();
+    getVariablesFromDEviceBySearchTerm(const  char* searchTerm)
+    float *readRealArrayFromPath(const char *path, short size);
+    void copyRealArray(float *destination, const float *source, short numElements);
+    bool writeIntValueToPath(const char* symbolPath, uint16_t value);
+    double readDoubleValueFromPath(const char* symbolPath);
+    bool writeStringValueToPath(const char* symbolPath, const char* value);
+    uint16_t readInt16ValueFromPath(const char* symbolPath);
+    const char* readStringValueFromPath(const char* symbolPath);
+    */
+
 #ifdef __cplusplus
 }
 #endif
-
-class AdsWrapper {
-public:
-    AdsWrapper();
-    ~AdsWrapper();
-
-    void writeValue(AmsNetId remoteNetId, char remoteIpV4[], int16_t value, const std::string& symbol);
-};
 
 #endif // ADSWRAPPER_H
